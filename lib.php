@@ -553,16 +553,28 @@ class format_onetopic extends format_base {
                     'default' => '',
                     'type' => PARAM_RAW
                 ),
-                'fontcolor' => array(
-                    'default' => '',
-                    'type' => PARAM_RAW
-                ),
                 'bgcolor' => array(
                     'default' => '',
                     'type' => PARAM_RAW
                 ),
                 'cssstyles' => array(
                     'default' => '',
+                    'type' => PARAM_RAW
+                ),
+                'fontcolor_#ffdd00' => array(
+                    'default' => '#373a3c',
+                    'type' => PARAM_RAW
+                ),
+                'fontcolor_#373a3c' => array(
+                    'default' => '#ffffff',
+                    'type' => PARAM_RAW
+                ),
+                'fontcolor_#f3f3f3' => array(
+                    'default' => '#373a3c',
+                    'type' => PARAM_RAW
+                ),
+                'fontcolor_#00a1f1' => array(
+                    'default' => '#ffffff',
                     'type' => PARAM_RAW
                 )
             );
@@ -612,19 +624,21 @@ class format_onetopic extends format_base {
                     'help' => 'firsttabcssstyles',
                     'help_component' => 'format_onetopic',
                 ),
-                'fontcolor' => array(
-                    'default' => '',
-                    'type' => PARAM_RAW,
-                    'label' => get_string('fontcolor', 'format_onetopic'),
-                    'help' => 'fontcolor',
-                    'help_component' => 'format_onetopic',
-                ),
                 'bgcolor' => array(
                     'default' => '',
                     'type' => PARAM_RAW,
                     'label' => get_string('bgcolor', 'format_onetopic'),
                     'help' => 'bgcolor',
                     'help_component' => 'format_onetopic',
+                    'element_type' => 'select',
+                    'element_attributes' => [
+                        [
+                            '#ffdd00' => 'Welcome tab (#FFDD00)',
+                            '#373a3c' => 'Important info tab (#373A3C)',
+                            '#f3f3f3' => 'Content/Child tab (#F3F3F3)',
+                            '#00a1f1' => 'Emphasised tab (#00A1F1)'
+                        ]
+                    ]
                 ),
                 'cssstyles' => array(
                     'default' => '',
@@ -632,6 +646,38 @@ class format_onetopic extends format_base {
                     'label' => get_string('cssstyles', 'format_onetopic'),
                     'help' => 'cssstyles',
                     'help_component' => 'format_onetopic',
+                ),
+                'fontcolor_#ffdd00' => array(
+                    'default' => '#373a3c',
+                    'type' => PARAM_RAW,
+                    'label' => 'Font color for bgcolor #FFDD00',
+                    'element_type' => 'hidden',
+                    'help' => 'fontcolor',
+                    'help_component' => 'format_onetopic'
+                ),
+                'fontcolor_#373a3c' => array(
+                    'default' => '#ffffff',
+                    'type' => PARAM_RAW,
+                    'label' => 'Font color for bgcolor #373A3C',
+                    'element_type' => 'hidden',
+                    'help' => 'fontcolor',
+                    'help_component' => 'format_onetopic'
+                ),
+                'fontcolor_#f3f3f3' => array(
+                    'default' => '#373a3c',
+                    'type' => PARAM_RAW,
+                    'label' => 'Font color for bgcolor #F3F3F3',
+                    'element_type' => 'hidden',
+                    'help' => 'fontcolor',
+                    'help_component' => 'format_onetopic'
+                ),
+                'fontcolor_#00a1f1' => array(
+                    'default' => '#ffffff',
+                    'type' => PARAM_RAW,
+                    'label' => 'Font color for bgcolor #00A1F1',
+                    'element_type' => 'hidden',
+                    'help' => 'fontcolor',
+                    'help_component' => 'format_onetopic'
                 )
             );
 
@@ -639,7 +685,6 @@ class format_onetopic extends format_base {
         }
         return $sectionformatoptions;
     }
-
 
     /**
      * Whether this format allows to delete sections

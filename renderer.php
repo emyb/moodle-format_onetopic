@@ -264,13 +264,13 @@ class format_onetopic_renderer extends format_section_renderer_base {
                 $customstyles = '';
                 $level = 0;
                 if (is_array($formatoptions)) {
-
-                    if (!empty($formatoptions['fontcolor'])) {
-                        $customstyles .= 'color: ' . $formatoptions['fontcolor'] . ';';
-                    }
-
                     if (!empty($formatoptions['bgcolor'])) {
                         $customstyles .= 'background-color: ' . $formatoptions['bgcolor'] . ';';
+
+                        // Font color based on background color.
+                        if (!empty($formatoptions["fontcolor_{$formatoptions['bgcolor']}"])) {
+                            $customstyles .= 'color: ' . $formatoptions["fontcolor_{$formatoptions['bgcolor']}"] . ';';
+                        }
                     }
 
                     if (!empty($formatoptions['cssstyles'])) {
