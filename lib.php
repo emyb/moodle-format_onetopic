@@ -542,22 +542,14 @@ class format_onetopic extends format_base {
                     'type' => PARAM_TEXT
                 ),
                 'firsttabfontcolor' => array(
-                    'default' => '',
+                    'default' => '#373a3c',
                     'type' => PARAM_RAW
                 ),
                 'firsttabbgcolor' => array(
-                    'default' => '',
-                    'type' => PARAM_RAW
-                ),
-                'firsttabcssstyles' => array(
-                    'default' => '',
+                    'default' => '#f3f3f3',
                     'type' => PARAM_RAW
                 ),
                 'bgcolor' => array(
-                    'default' => '',
-                    'type' => PARAM_RAW
-                ),
-                'cssstyles' => array(
                     'default' => '',
                     'type' => PARAM_RAW
                 ),
@@ -604,25 +596,20 @@ class format_onetopic extends format_base {
                     'help_component' => 'format_onetopic',
                 ),
                 'firsttabfontcolor' => array(
-                    'default' => '',
+                    'default' => '#373a3c',
                     'type' => PARAM_RAW,
                     'label' => get_string('firsttabfontcolor', 'format_onetopic'),
                     'help' => 'firsttabfontcolor',
                     'help_component' => 'format_onetopic',
+                    'element_type' => 'hidden'
                 ),
                 'firsttabbgcolor' => array(
-                    'default' => '',
+                    'default' => '#f3f3f3',
                     'type' => PARAM_RAW,
                     'label' => get_string('firsttabbgcolor', 'format_onetopic'),
                     'help' => 'firsttabbgcolor',
                     'help_component' => 'format_onetopic',
-                ),
-                'firsttabcssstyles' => array(
-                    'default' => '',
-                    'type' => PARAM_RAW,
-                    'label' => get_string('firsttabcssstyles', 'format_onetopic'),
-                    'help' => 'firsttabcssstyles',
-                    'help_component' => 'format_onetopic',
+                    'element_type' => 'hidden'
                 ),
                 'bgcolor' => array(
                     'default' => '',
@@ -639,13 +626,6 @@ class format_onetopic extends format_base {
                             '#00a1f1' => 'Emphasised tab (#00A1F1)'
                         ]
                     ]
-                ),
-                'cssstyles' => array(
-                    'default' => '',
-                    'type' => PARAM_RAW,
-                    'label' => get_string('cssstyles', 'format_onetopic'),
-                    'help' => 'cssstyles',
-                    'help_component' => 'format_onetopic',
                 ),
                 'fontcolor_#ffdd00' => array(
                     'default' => '#373a3c',

@@ -273,10 +273,6 @@ class format_onetopic_renderer extends format_section_renderer_base {
                         }
                     }
 
-                    if (!empty($formatoptions['cssstyles'])) {
-                        $customstyles .= $formatoptions['cssstyles'] . ';';
-                    }
-
                     if (isset($formatoptions['level'])) {
                         $level = $formatoptions['level'];
                     }
@@ -350,9 +346,6 @@ class format_onetopic_renderer extends format_section_renderer_base {
                             }
                             if (!empty($parentformatoptions['firsttabbgcolor'])) {
                                 $styles .= 'background-color: ' . $parentformatoptions['firsttabbgcolor'] . ';';
-                            }
-                            if (!empty($parentformatoptions['firsttabcssstyles'])) {
-                                $styles .= $parentformatoptions['firsttabcssstyles'] . ';';
                             }
 
                             $tabs[$parentindex]->subtree[0]->text = '<div class="tab_content tab_initial" style="' .$styles. '">' .
