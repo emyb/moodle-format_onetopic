@@ -271,6 +271,10 @@ class format_onetopic_renderer extends format_section_renderer_base {
                         if (!empty($formatoptions["fontcolor_{$formatoptions['bgcolor']}"])) {
                             $customstyles .= 'color: ' . $formatoptions["fontcolor_{$formatoptions['bgcolor']}"] . ';';
                         }
+                        // Content style tab to be bolder.
+                        if ($formatoptions['bgcolor'] === '#f3f3f3') {
+                            $customstyles .= 'font-weight: bolder;';
+                        }
                     }
 
                     if (isset($formatoptions['level'])) {

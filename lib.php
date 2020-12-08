@@ -620,17 +620,18 @@ class format_onetopic extends format_base {
                     'element_type' => 'select',
                     'element_attributes' => [
                         [
-                            '#ffdd00' => 'Welcome tab (#FFDD00)',
-                            '#373a3c' => 'Important info tab (#373A3C)',
-                            '#f3f3f3' => 'Content/Child tab (#F3F3F3)',
-                            '#00a1f1' => 'Emphasised tab (#00A1F1)'
+                            '#ffdd00' => 'Welcome',
+                            '#373a3c' => 'Important info',
+                            '#f3f3f3' => 'Content',
+                            '#eeeeee' => 'Child',
+                            '#00a1f1' => 'Special'
                         ]
                     ]
                 ),
                 'fontcolor_#ffdd00' => array(
                     'default' => '#373a3c',
                     'type' => PARAM_RAW,
-                    'label' => 'Font color for bgcolor #FFDD00',
+                    'label' => 'Font color for bgcolor welcome #FFDD00',
                     'element_type' => 'hidden',
                     'help' => 'fontcolor',
                     'help_component' => 'format_onetopic'
@@ -638,7 +639,7 @@ class format_onetopic extends format_base {
                 'fontcolor_#373a3c' => array(
                     'default' => '#ffffff',
                     'type' => PARAM_RAW,
-                    'label' => 'Font color for bgcolor #373A3C',
+                    'label' => 'Font color for bgcolor important info #373A3C',
                     'element_type' => 'hidden',
                     'help' => 'fontcolor',
                     'help_component' => 'format_onetopic'
@@ -646,7 +647,15 @@ class format_onetopic extends format_base {
                 'fontcolor_#f3f3f3' => array(
                     'default' => '#373a3c',
                     'type' => PARAM_RAW,
-                    'label' => 'Font color for bgcolor #F3F3F3',
+                    'label' => 'Font color for bgcolor content #F3F3F3',
+                    'element_type' => 'hidden',
+                    'help' => 'fontcolor',
+                    'help_component' => 'format_onetopic'
+                ),
+                'fontcolor_#eeeeee' => array(
+                    'default' => '#373a3c',
+                    'type' => PARAM_RAW,
+                    'label' => 'Font color for bgcolor child #eeeeee',
                     'element_type' => 'hidden',
                     'help' => 'fontcolor',
                     'help_component' => 'format_onetopic'
@@ -654,7 +663,7 @@ class format_onetopic extends format_base {
                 'fontcolor_#00a1f1' => array(
                     'default' => '#ffffff',
                     'type' => PARAM_RAW,
-                    'label' => 'Font color for bgcolor #00A1F1',
+                    'label' => 'Font color for bgcolor special #00A1F1',
                     'element_type' => 'hidden',
                     'help' => 'fontcolor',
                     'help_component' => 'format_onetopic'
