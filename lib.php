@@ -447,6 +447,7 @@ class format_onetopic extends format_base {
      */
     public function create_edit_form_elements(&$mform, $forsection = false) {
         global $COURSE;
+
         $elements = parent::create_edit_form_elements($mform, $forsection);
 
         if (!$forsection && (empty($COURSE->id) || $COURSE->id == SITEID)) {
@@ -463,6 +464,9 @@ class format_onetopic extends format_base {
             }
             array_unshift($elements, $element);
         }
+
+        // Set conditional top border color.
+        $mform->disabledIf('topbordercolor', 'bgcolor', 'neq', '#eeeeee');
 
         return $elements;
     }
@@ -572,6 +576,10 @@ class format_onetopic extends format_base {
                 'fontcolor_#eeeeee' => array(
                     'default' => '#363a3c',
                     'type' => PARAM_RAW
+                ),
+                'topbordercolor' => array(
+                    'default' => '#eeeeee',
+                    'type' => PARAM_RAW
                 )
             );
         }
@@ -622,15 +630,15 @@ class format_onetopic extends format_base {
                     'help' => 'bgcolor',
                     'help_component' => 'format_onetopic',
                     'element_type' => 'select',
-                    'element_attributes' => [
-                        [
+                    'element_attributes' => array(
+                        array(
                             '#ffdd00' => 'Welcome',
                             '#373a3c' => 'Important info',
                             '#f3f3f3' => 'Content',
                             '#eeeeee' => 'Child',
                             '#00a1f1' => 'Special'
-                        ]
-                    ]
+                        )
+                    )
                 ),
                 'fontcolor_#ffdd00' => array(
                     'default' => '#373a3c',
@@ -671,6 +679,22 @@ class format_onetopic extends format_base {
                     'element_type' => 'hidden',
                     'help' => 'fontcolor',
                     'help_component' => 'format_onetopic'
+                ),
+                'topbordercolor' => array(
+                    'default' => '#eeeeee',
+                    'type' => PARAM_RAW,
+                    'label' => get_string('topbordercolor', 'format_onetopic'),
+                    'help' => 'topbordercolor',
+                    'help_component' => 'format_onetopic',
+                    'element_type' => 'select',
+                    'element_attributes' => array(
+                        array(
+                            '#eeeeee' => 'None',
+                            '#ffdd00' => 'Yellow',
+                            '#373a3c' => 'Dark',
+                            '#00a1f1' => 'Blue'
+                        )
+                    )
                 )
             );
 

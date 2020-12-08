@@ -93,3 +93,7 @@ $string['templatetopic_icons_help'] = 'This option defines if the icons are disp
 $string['hidden_message'] = 'The section <em>{$a}</em> is not currently available.';
 $string['privacy:metadata'] = 'The Onetopic format plugin does not store any personal data.';
 $string['hiddensectionshelp'] = 'Hidden sections are shown in collapsed form with available message';
+
+// Additional language strings.
+$string['topbordercolor'] = 'Top border color';
+$string['topbordercolor_help'] = 'Add a top border color to your tab. Available only for Child type tabs. Choose from the following colors: <ul><li><span style="background-color: #FFDD00; color: #373a3c">Yellow</span></li><li><span style="background-color: #373a3c; color: #fff">Dark</span></li><li><span style="background-color: #00a1f1; color: #fff">Blue</span></li></ul>';

@@ -265,11 +265,11 @@ class format_onetopic_renderer extends format_section_renderer_base {
                 $level = 0;
                 if (is_array($formatoptions)) {
                     if (!empty($formatoptions['bgcolor'])) {
-                        $customstyles .= 'background-color: ' . $formatoptions['bgcolor'] . ';';
+                        $customstyles .= "background-color: {$formatoptions['bgcolor']};";
 
                         // Font color based on background color.
                         if (!empty($formatoptions["fontcolor_{$formatoptions['bgcolor']}"])) {
-                            $customstyles .= 'color: ' . $formatoptions["fontcolor_{$formatoptions['bgcolor']}"] . ';';
+                            $customstyles .= "color: {$formatoptions["fontcolor_{$formatoptions['bgcolor']}"]};";
                         }
                         // Content style tab to be bolder.
                         if ($formatoptions['bgcolor'] === '#f3f3f3') {
@@ -279,6 +279,13 @@ class format_onetopic_renderer extends format_section_renderer_base {
 
                     if (isset($formatoptions['level'])) {
                         $level = $formatoptions['level'];
+                    }
+
+                    // Add the border.
+                    if ($level === 0 || $level > 0 && $formatoptions['bgcolor'] !== '#eeeeee') {
+                        $customstyles .= "border-top: 5px solid {$formatoptions['bgcolor']};";
+                    } else {
+                        $customstyles .= "border-top: 5px solid {$formatoptions['topbordercolor']};";
                     }
                 }
 
@@ -351,6 +358,9 @@ class format_onetopic_renderer extends format_section_renderer_base {
                             if (!empty($parentformatoptions['firsttabbgcolor'])) {
                                 $styles .= 'background-color: ' . $parentformatoptions['firsttabbgcolor'] . ';';
                             }
+
+                            // Add the border.
+                            $styles .= "border-top: 5px solid {$parentformatoptions['firsttabbgcolor']};";
 
                             $tabs[$parentindex]->subtree[0]->text = '<div class="tab_content tab_initial" style="' .$styles. '">' .
                                                                     $firsttabtext . "</div>";
