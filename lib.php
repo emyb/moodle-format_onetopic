@@ -568,6 +568,10 @@ class format_onetopic extends format_base {
                 'fontcolor_#00a1f1' => array(
                     'default' => '#ffffff',
                     'type' => PARAM_RAW
+                ),
+                'fontcolor_#eeeeee' => array(
+                    'default' => '#363a3c',
+                    'type' => PARAM_RAW
                 )
             );
         }
