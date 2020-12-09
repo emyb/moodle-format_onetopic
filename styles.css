@@ -59,6 +59,7 @@
 
 .format-onetopic .onetopic .nav-tabs > li > a {
     padding: 0;
+    margin-right: 1rem;
 }
 
 .format-onetopic .onetopic .tab_content {

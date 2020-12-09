@@ -639,7 +639,7 @@ class format_onetopic extends format_base {
                 'firsttabtopbordercolor' => array(
                     'default' => '#eeeeee',
                     'type' => PARAM_RAW,
-                    'label' => get_string('topbordercolor', 'format_onetopic'),
+                    'label' => get_string('firsttabtopbordercolor', 'format_onetopic'),
                     'help' => 'topbordercolor',
                     'help_component' => 'format_onetopic',
                     'element_type' => 'select',
