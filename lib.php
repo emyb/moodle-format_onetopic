@@ -619,7 +619,7 @@ class format_onetopic extends format_base {
                 'firsttabbgcolor' => array(
                     'default' => '',
                     'type' => PARAM_RAW,
-                    'label' => 'First tab in sublevel '.get_string('bgcolor', 'format_onetopic'),
+                    'label' => get_string('firsttabbgcolor', 'format_onetopic'),
                     'help' => 'bgcolor',
                     'help_component' => 'format_onetopic',
                     'element_type' => 'select',
@@ -653,41 +653,41 @@ class format_onetopic extends format_base {
                 'fontcolor_#ffdd00' => array(
                     'default' => '#373a3c',
                     'type' => PARAM_RAW,
-                    'label' => 'Font color for bgcolor welcome #FFDD00',
+                    'label' => get_string('fontcolorwelcometab', 'format_onetopic'),
                     'element_type' => 'hidden',
-                    'help' => 'fontcolor',
+                    'help' => 'fontcolorwelcometab',
                     'help_component' => 'format_onetopic'
                 ),
                 'fontcolor_#373a3c' => array(
                     'default' => '#ffffff',
                     'type' => PARAM_RAW,
-                    'label' => 'Font color for bgcolor important info #373A3C',
+                    'label' => get_string('fontcolorimportantinfotab', 'format_onetopic'),
                     'element_type' => 'hidden',
-                    'help' => 'fontcolor',
+                    'help' => 'fontcolorimportantinfotab',
                     'help_component' => 'format_onetopic'
                 ),
                 'fontcolor_#f3f3f3' => array(
                     'default' => '#373a3c',
                     'type' => PARAM_RAW,
-                    'label' => 'Font color for bgcolor content #F3F3F3',
+                    'label' => get_string('fontcolorcontenttab', 'format_onetopic'),
                     'element_type' => 'hidden',
-                    'help' => 'fontcolor',
+                    'help' => 'fontcolorcontenttab',
                     'help_component' => 'format_onetopic'
                 ),
                 'fontcolor_#eeeeee' => array(
                     'default' => '#373a3c',
                     'type' => PARAM_RAW,
-                    'label' => 'Font color for bgcolor child #eeeeee',
+                    'label' => get_string('fontcolorchildtab', 'format_onetopic'),
                     'element_type' => 'hidden',
-                    'help' => 'fontcolor',
+                    'help' => 'fontcolorchildtab',
                     'help_component' => 'format_onetopic'
                 ),
                 'fontcolor_#00a1f1' => array(
                     'default' => '#ffffff',
                     'type' => PARAM_RAW,
-                    'label' => 'Font color for bgcolor special #00A1F1',
+                    'label' => get_string('fontcolorspecialtab', 'format_onetopic'),
                     'element_type' => 'hidden',
-                    'help' => 'fontcolor',
+                    'help' => 'fontcolorspecialtab',
                     'help_component' => 'format_onetopic'
                 ),
                 'topbordercolor' => array(
