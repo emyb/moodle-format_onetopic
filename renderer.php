@@ -359,7 +359,6 @@ class format_onetopic_renderer extends format_section_renderer_base {
                                 $styles .= 'background-color: ' . $parentformatoptions['firsttabbgcolor'] . ';';
 
                                 // Font color based on background color.
-                                print_object($parentformatoptions);
                                 if (!empty($parentformatoptions["fontcolor_{$parentformatoptions['firsttabbgcolor']}"])) {
                                     $styles .= "color: {$parentformatoptions["fontcolor_{$parentformatoptions['firsttabbgcolor']}"]};";
                                 }
