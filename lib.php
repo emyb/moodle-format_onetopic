@@ -466,6 +466,7 @@ class format_onetopic extends format_base {
         }
 
         // Set conditional top border color.
+
         $mform->disabledIf('topbordercolor', 'bgcolor', 'neq', '#eeeeee');
 
         return $elements;
@@ -550,7 +551,7 @@ class format_onetopic extends format_base {
                     'type' => PARAM_RAW
                 ),
                 'firsttabbgcolor' => array(
-                    'default' => '#f3f3f3',
+                    'default' => '',
                     'type' => PARAM_RAW
                 ),
                 'bgcolor' => array(
@@ -616,12 +617,21 @@ class format_onetopic extends format_base {
                     'element_type' => 'hidden'
                 ),
                 'firsttabbgcolor' => array(
-                    'default' => '#f3f3f3',
+                    'default' => '',
                     'type' => PARAM_RAW,
-                    'label' => get_string('firsttabbgcolor', 'format_onetopic'),
-                    'help' => 'firsttabbgcolor',
+                    'label' => 'First tab in sublevel '.get_string('bgcolor', 'format_onetopic'),
+                    'help' => 'bgcolor',
                     'help_component' => 'format_onetopic',
-                    'element_type' => 'hidden'
+                    'element_type' => 'select',
+                    'element_attributes' => array(
+                        array(
+                            '#ffdd00' => 'Welcome',
+                            '#373a3c' => 'Important info',
+                            '#f3f3f3' => 'Content',
+                            '#eeeeee' => 'Child',
+                            '#00a1f1' => 'Special'
+                        )
+                    )
                 ),
                 'bgcolor' => array(
                     'default' => '',

@@ -357,6 +357,20 @@ class format_onetopic_renderer extends format_section_renderer_base {
                             }
                             if (!empty($parentformatoptions['firsttabbgcolor'])) {
                                 $styles .= 'background-color: ' . $parentformatoptions['firsttabbgcolor'] . ';';
+
+                                // Font color based on background color.
+                                print_object($parentformatoptions);
+                                if (!empty($parentformatoptions["fontcolor_{$parentformatoptions['firsttabbgcolor']}"])) {
+                                    $styles .= "color: {$parentformatoptions["fontcolor_{$parentformatoptions['firsttabbgcolor']}"]};";
+                                }
+                                // Content style tab to be bolder.
+                                if (
+                                    $parentformatoptions['firsttabbgcolor'] === '#f3f3f3' ||
+                                    $parentformatoptions['firsttabbgcolor'] === '#ffdd00'
+                                ) {
+                                    $styles .= 'font-weight: bolder;';
+                                }
+
                             }
 
                             // Add the border.
