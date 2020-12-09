@@ -466,8 +466,8 @@ class format_onetopic extends format_base {
         }
 
         // Set conditional top border color.
-
         $mform->disabledIf('topbordercolor', 'bgcolor', 'neq', '#eeeeee');
+        $mform->disabledIf('firsttabtopbordercolor', 'firsttabbgcolor', 'neq', '#eeeeee');
 
         return $elements;
     }
@@ -554,6 +554,10 @@ class format_onetopic extends format_base {
                     'default' => '',
                     'type' => PARAM_RAW
                 ),
+                'firsttabtopbordercolor' => array(
+                    'default' => '#eeeeee',
+                    'type' => PARAM_RAW
+                ),
                 'bgcolor' => array(
                     'default' => '',
                     'type' => PARAM_RAW
@@ -630,6 +634,22 @@ class format_onetopic extends format_base {
                             '#f3f3f3' => 'Content',
                             '#eeeeee' => 'Child',
                             '#00a1f1' => 'Special'
+                        )
+                    )
+                ),
+                'firsttabtopbordercolor' => array(
+                    'default' => '#eeeeee',
+                    'type' => PARAM_RAW,
+                    'label' => get_string('topbordercolor', 'format_onetopic'),
+                    'help' => 'topbordercolor',
+                    'help_component' => 'format_onetopic',
+                    'element_type' => 'select',
+                    'element_attributes' => array(
+                        array(
+                            '#eeeeee' => 'None',
+                            '#ffdd00' => 'Yellow',
+                            '#373a3c' => 'Dark',
+                            '#00a1f1' => 'Blue'
                         )
                     )
                 ),

@@ -373,7 +373,11 @@ class format_onetopic_renderer extends format_section_renderer_base {
                             }
 
                             // Add the border.
-                            $styles .= "border-top: 5px solid {$parentformatoptions['firsttabbgcolor']};";
+                            if ($parentformatoptions['firsttabbgcolor'] !== '#eeeeee') {
+                                $styles .= "border-top: 5px solid {$parentformatoptions['firsttabbgcolor']};";
+                            } else {
+                                $styles .= "border-top: 5px solid {$parentformatoptions['firsttabtopbordercolor']};";
+                            }
 
                             $tabs[$parentindex]->subtree[0]->text = '<div class="tab_content tab_initial" style="' .$styles. '">' .
                                                                     $firsttabtext . "</div>";

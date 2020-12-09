@@ -97,6 +97,7 @@ $string['hiddensectionshelp'] = 'Hidden sections are shown in collapsed form wit
 // Additional language strings.
 $string['topbordercolor'] = 'Top border color';
 $string['topbordercolor_help'] = 'Add a top border color to your tab. Available only for Child type tabs. Choose from the following colors: <ul><li><span style="background-color: #FFDD00; color: #373a3c">Yellow</span></li><li><span style="background-color: #373a3c; color: #fff">Dark</span></li><li><span style="background-color: #00a1f1; color: #fff">Blue</span></li></ul>';
+$string['firsttabtopbordercolor'] = 'First tab top border color';
 $string['firsttabbgcolor'] = 'First tab type';
 $string['fontcolorwelcometab'] = 'Font color for the welcome tab type';
 $string['fontcolorwelcometab_help'] = 'Sets the font color for the welcome tab type to <span style="background-color: #ffdd00; color: #373a3c">#373A3C</span>';
