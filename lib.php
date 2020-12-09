@@ -447,7 +447,6 @@ class format_onetopic extends format_base {
      */
     public function create_edit_form_elements(&$mform, $forsection = false) {
         global $COURSE;
-
         $elements = parent::create_edit_form_elements($mform, $forsection);
 
         if (!$forsection && (empty($COURSE->id) || $COURSE->id == SITEID)) {
