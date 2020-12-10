@@ -550,7 +550,7 @@ class format_onetopic extends format_base {
                     'type' => PARAM_RAW
                 ),
                 'firsttabbgcolor' => array(
-                    'default' => '',
+                    'default' => '#f3f3f3',
                     'type' => PARAM_RAW
                 ),
                 'firsttabtopbordercolor' => array(
@@ -558,7 +558,7 @@ class format_onetopic extends format_base {
                     'type' => PARAM_RAW
                 ),
                 'bgcolor' => array(
-                    'default' => '',
+                    'default' => '#f3f3f3',
                     'type' => PARAM_RAW
                 ),
                 'fontcolor_#ffdd00' => array(
