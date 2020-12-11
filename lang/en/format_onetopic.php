@@ -96,7 +96,7 @@ $string['hiddensectionshelp'] = 'Hidden sections are shown in collapsed form wit
 
 // Additional language strings.
 $string['topbordercolor'] = 'Top border color';
-$string['topbordercolor_help'] = 'Add a top border color to your tab. Available only for Child type tabs. Choose from the following colors: <ul><li><span style="background-color: #FFDD00; color: #373a3c">Yellow</span></li><li><span style="background-color: #373a3c; color: #fff">Dark</span></li><li><span style="background-color: #00a1f1; color: #fff">Blue</span></li></ul>';
+$string['topbordercolor_help'] = 'Add a top border color to your tab. Available only for Learning type tabs. Choose from the following colors: <ul><li><span style="background-color: #FFDD00; color: #373a3c">Yellow</span></li><li><span style="background-color: #373a3c; color: #fff">Dark</span></li><li><span style="background-color: #00a1f1; color: #fff">Blue</span></li></ul>';
 $string['firsttabtopbordercolor'] = 'First tab top border color';
 $string['firsttabbgcolor'] = 'First tab type';
 $string['fontcolorwelcometab'] = 'Font color for the welcome tab type';
@@ -109,3 +109,14 @@ $string['fontcolorchildtab'] = 'Font color for the child tab type';
 $string['fontcolorchildtab_help'] = 'Sets the font color for the child tab type to <span style="background-color: #f3f3f3; color: #373a3c">#373A3C</span>';
 $string['fontcolorspecialtab'] = 'Font color for the special tab type';
 $string['fontcolorspecialtab_help'] = 'Sets the font color for the special tab type to <span style="background-color: #00a1f1; color: #ffffff">#FFFFFF</span>';
+
+$string['tabtype_ffdd00'] = 'Welcome';
+$string['tabtype_373a3c'] = 'Important info';
+$string['tabtype_f3f3f3'] = 'Learning';
+$string['tabtype_eeeeee'] = 'Child';
+$string['tabtype_00a1f1'] = 'Special';
+
+$string['topbordercolor_eeeeee'] = 'None';
+$string['topbordercolor_ffdd00'] = 'Yellow';
+$string['topbordercolor_373a3c'] = 'Dark';
+$string['topbordercolor_00a1f1'] = 'Blue';

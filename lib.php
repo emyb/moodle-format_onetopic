@@ -465,8 +465,8 @@ class format_onetopic extends format_base {
         }
 
         // Set conditional top border color.
-        $mform->disabledIf('topbordercolor', 'bgcolor', 'neq', '#eeeeee');
-        $mform->disabledIf('firsttabtopbordercolor', 'firsttabbgcolor', 'neq', '#eeeeee');
+        $mform->disabledIf('topbordercolor', 'bgcolor', 'neq', '#f3f3f3');
+        $mform->disabledIf('firsttabtopbordercolor', 'firsttabbgcolor', 'neq', '#f3f3f3');
 
         return $elements;
     }
@@ -628,11 +628,11 @@ class format_onetopic extends format_base {
                     'element_type' => 'select',
                     'element_attributes' => array(
                         array(
-                            '#ffdd00' => 'Welcome',
-                            '#373a3c' => 'Important info',
-                            '#f3f3f3' => 'Content',
-                            '#eeeeee' => 'Child',
-                            '#00a1f1' => 'Special'
+                            '#ffdd00' => get_string('tabtype_ffdd00', 'format_onetopic'),
+                            '#373a3c' => get_string('tabtype_373a3c', 'format_onetopic'),
+                            '#f3f3f3' => get_string('tabtype_f3f3f3', 'format_onetopic'),
+                            '#eeeeee' => get_string('tabtype_eeeeee', 'format_onetopic'),
+                            '#00a1f1' => get_string('tabtype_00a1f1', 'format_onetopic')
                         )
                     )
                 ),
@@ -645,10 +645,10 @@ class format_onetopic extends format_base {
                     'element_type' => 'select',
                     'element_attributes' => array(
                         array(
-                            '#eeeeee' => 'None',
-                            '#ffdd00' => 'Yellow',
-                            '#373a3c' => 'Dark',
-                            '#00a1f1' => 'Blue'
+                            '#eeeeee' => get_string('topbordercolor_eeeeee', 'format_onetopic'),
+                            '#ffdd00' => get_string('topbordercolor_ffdd00', 'format_onetopic'),
+                            '#373a3c' => get_string('topbordercolor_373a3c', 'format_onetopic'),
+                            '#00a1f1' => get_string('topbordercolor_00a1f1', 'format_onetopic')
                         )
                     )
                 ),
@@ -661,11 +661,11 @@ class format_onetopic extends format_base {
                     'element_type' => 'select',
                     'element_attributes' => array(
                         array(
-                            '#ffdd00' => 'Welcome',
-                            '#373a3c' => 'Important info',
-                            '#f3f3f3' => 'Content',
-                            '#eeeeee' => 'Child',
-                            '#00a1f1' => 'Special'
+                            '#ffdd00' => get_string('tabtype_ffdd00', 'format_onetopic'),
+                            '#373a3c' => get_string('tabtype_373a3c', 'format_onetopic'),
+                            '#f3f3f3' => get_string('tabtype_f3f3f3', 'format_onetopic'),
+                            '#eeeeee' => get_string('tabtype_eeeeee', 'format_onetopic'),
+                            '#00a1f1' => get_string('tabtype_00a1f1', 'format_onetopic')
                         )
                     )
                 ),
@@ -718,10 +718,10 @@ class format_onetopic extends format_base {
                     'element_type' => 'select',
                     'element_attributes' => array(
                         array(
-                            '#eeeeee' => 'None',
-                            '#ffdd00' => 'Yellow',
-                            '#373a3c' => 'Dark',
-                            '#00a1f1' => 'Blue'
+                            '#eeeeee' => get_string('topbordercolor_eeeeee', 'format_onetopic'),
+                            '#ffdd00' => get_string('topbordercolor_ffdd00', 'format_onetopic'),
+                            '#373a3c' => get_string('topbordercolor_373a3c', 'format_onetopic'),
+                            '#00a1f1' => get_string('topbordercolor_00a1f1', 'format_onetopic')
                         )
                     )
                 )
