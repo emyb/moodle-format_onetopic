@@ -33,7 +33,9 @@ defined('MOODLE_INTERNAL') || die();
 function xmldb_format_onetopic_upgrade($oldversion) {
     global $CFG, $DB;
 
-    require_once($CFG->dirroot . '/course/format/onetopic/db/upgradelib.php');
+    if (file_exists($CFG->dirroot. '/course/format/topics/db/upgradelib.php')) {
+        require_once($CFG->dirroot . '/course/format/onetopic/db/upgradelib.php');
+    }
 
     if ($oldversion < 2018010601) {
 

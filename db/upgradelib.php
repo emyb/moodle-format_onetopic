@@ -24,7 +24,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-require_once($CFG->dirroot. '/course/format/topics/db/upgradelib.php');
+if (file_exists($CFG->dirroot. '/course/format/topics/db/upgradelib.php')) {
+    require_once($CFG->dirroot. '/course/format/topics/db/upgradelib.php');
+}
 
 /**
  * This method finds all courses in 'onetopic' format that have actual number of sections
@@ -70,8 +72,11 @@ function format_onetopic_upgrade_remove_numsections() {
     unset($actual);
     unset($numsections);
 
-    foreach ($needfixing as $courseid => $numsections) {
-        format_topics_upgrade_hide_extra_sections($courseid, $numsections);
+    // Check if function exists as it was removed in MDL-65809 (Moodle 3.9).
+    if (function_exists('format_topics_upgrade_hide_extra_sections')) {
+        foreach ($needfixing as $courseid => $numsections) {
+            format_topics_upgrade_hide_extra_sections($courseid, $numsections);
+        }
     }
 
     $DB->delete_records('course_format_options', ['format' => 'onetopic', 'sectionid' => 0, 'name' => 'numsections']);
