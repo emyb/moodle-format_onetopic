@@ -546,11 +546,11 @@ class format_onetopic extends format_base {
                     'type' => PARAM_TEXT
                 ),
                 'firsttabfontcolor' => array(
-                    'default' => '#373a3c',
+                    'default' => '#000000',
                     'type' => PARAM_RAW
                 ),
                 'firsttabbgcolor' => array(
-                    'default' => '#f3f3f3',
+                    'default' => '#ffffff',
                     'type' => PARAM_RAW
                 ),
                 'firsttabtopbordercolor' => array(
@@ -558,11 +558,11 @@ class format_onetopic extends format_base {
                     'type' => PARAM_RAW
                 ),
                 'bgcolor' => array(
-                    'default' => '#f3f3f3',
+                    'default' => '#ffffff',
                     'type' => PARAM_RAW
                 ),
                 'fontcolor_#ffdd00' => array(
-                    'default' => '#373a3c',
+                    'default' => '#000000',
                     'type' => PARAM_RAW
                 ),
                 'fontcolor_#373a3c' => array(
@@ -570,7 +570,7 @@ class format_onetopic extends format_base {
                     'type' => PARAM_RAW
                 ),
                 'fontcolor_#f3f3f3' => array(
-                    'default' => '#373a3c',
+                    'default' => '#000000',
                     'type' => PARAM_RAW
                 ),
                 'fontcolor_#00a1f1' => array(
@@ -612,7 +612,7 @@ class format_onetopic extends format_base {
                     'help_component' => 'format_onetopic',
                 ),
                 'firsttabfontcolor' => array(
-                    'default' => '#373a3c',
+                    'default' => '#000000',
                     'type' => PARAM_RAW,
                     'label' => get_string('firsttabfontcolor', 'format_onetopic'),
                     'help' => 'firsttabfontcolor',
@@ -620,7 +620,7 @@ class format_onetopic extends format_base {
                     'element_type' => 'hidden'
                 ),
                 'firsttabbgcolor' => array(
-                    'default' => '',
+                    'default' => '#ffffff',
                     'type' => PARAM_RAW,
                     'label' => get_string('firsttabbgcolor', 'format_onetopic'),
                     'help' => 'bgcolor',
@@ -653,7 +653,7 @@ class format_onetopic extends format_base {
                     )
                 ),
                 'bgcolor' => array(
-                    'default' => '',
+                    'default' => '#ffffff',
                     'type' => PARAM_RAW,
                     'label' => get_string('bgcolor', 'format_onetopic'),
                     'help' => 'bgcolor',
@@ -670,7 +670,7 @@ class format_onetopic extends format_base {
                     )
                 ),
                 'fontcolor_#ffdd00' => array(
-                    'default' => '#373a3c',
+                    'default' => '#000000',
                     'type' => PARAM_RAW,
                     'label' => get_string('fontcolorwelcometab', 'format_onetopic'),
                     'element_type' => 'hidden',
@@ -686,7 +686,7 @@ class format_onetopic extends format_base {
                     'help_component' => 'format_onetopic'
                 ),
                 'fontcolor_#f3f3f3' => array(
-                    'default' => '#373a3c',
+                    'default' => '#000000',
                     'type' => PARAM_RAW,
                     'label' => get_string('fontcolorcontenttab', 'format_onetopic'),
                     'element_type' => 'hidden',
@@ -694,7 +694,7 @@ class format_onetopic extends format_base {
                     'help_component' => 'format_onetopic'
                 ),
                 'fontcolor_#eeeeee' => array(
-                    'default' => '#373a3c',
+                    'default' => '#000000',
                     'type' => PARAM_RAW,
                     'label' => get_string('fontcolorchildtab', 'format_onetopic'),
                     'element_type' => 'hidden',

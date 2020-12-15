@@ -282,8 +282,8 @@ class format_onetopic_renderer extends format_section_renderer_base {
                     }
 
                     // Add the border.
-                    if ($level === 0 || $level > 0 && $formatoptions['bgcolor'] !== '#eeeeee') {
-                        $customstyles .= "border-top: 5px solid {$formatoptions['bgcolor']};";
+                    if ($level === 0 || $level > 0 && $formatoptions['bgcolor'] !== '#f3f3f3') {
+                        $customstyles .= "padding-top: 8px;";
                     } else {
                         $customstyles .= "border-top: 5px solid {$formatoptions['topbordercolor']};";
                     }
