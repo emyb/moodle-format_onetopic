@@ -255,6 +255,9 @@ class format_onetopic_renderer extends format_section_renderer_base {
                 $showsection = $canviewhidden || !($course->hiddensections == 1);
             }
 
+            // Check if the tab is active to apply the additional padding.
+            $tabisactive = $displaysection === $thissection->section;
+
             if ($showsection) {
 
                 $formatoptions = course_get_format($course)->get_format_options($thissection);
@@ -275,6 +278,9 @@ class format_onetopic_renderer extends format_section_renderer_base {
                         if ($formatoptions['bgcolor'] === '#f3f3f3') {
                             $customstyles .= 'font-weight: bolder;';
                         }
+                        if ($tabisactive) {
+                            $customstyles .= "border-bottom: 8px solid {$formatoptions['bgcolor']};";
+                        }
                     }
 
                     if (isset($formatoptions['level'])) {
@@ -286,6 +292,9 @@ class format_onetopic_renderer extends format_section_renderer_base {
                         $customstyles .= "padding-top: 8px;";
                     } else {
                         $customstyles .= "border-top: 5px solid {$formatoptions['topbordercolor']};";
+                    }
+                    if ($tabisactive) {
+                        $customstyles .= "border-bottom: 8px solid {$formatoptions['bgcolor']};";
                     }
                 }
 
@@ -354,17 +363,14 @@ class format_onetopic_renderer extends format_section_renderer_base {
                             $styles = '';
                             if (!empty($parentformatoptions['firsttabfontcolor'])) {
                                 $styles .= 'color: ' . $parentformatoptions['firsttabfontcolor'] . ';';
+                            } else if (!empty($parentformatoptions["fontcolor_{$parentformatoptions['firsttabbgcolor']}"])) {
+                                // Font color based on background color.
+                                $styles .= "color: {$parentformatoptions["fontcolor_{$parentformatoptions['firsttabbgcolor']}"]};";
                             }
                             if (!empty($parentformatoptions['firsttabbgcolor'])) {
                                 $styles .= 'background-color: ' . $parentformatoptions['firsttabbgcolor'] . ';';
-
-                                // Font color based on background color.
-                                if (!empty($parentformatoptions["fontcolor_{$parentformatoptions['firsttabbgcolor']}"])) {
-                                    $styles .= "color: {$parentformatoptions["fontcolor_{$parentformatoptions['firsttabbgcolor']}"]};";
-                                }
                                 // Content style tab to be bolder.
-                                if (
-                                    $parentformatoptions['firsttabbgcolor'] === '#f3f3f3' ||
+                                if ($parentformatoptions['firsttabbgcolor'] === '#f3f3f3' ||
                                     $parentformatoptions['firsttabbgcolor'] === '#ffdd00'
                                 ) {
                                     $styles .= 'font-weight: bolder;';
@@ -373,19 +379,21 @@ class format_onetopic_renderer extends format_section_renderer_base {
                             }
 
                             // Add the border.
-                            if ($parentformatoptions['firsttabbgcolor'] !== '#eeeeee') {
-                                $styles .= "border-top: 5px solid {$parentformatoptions['firsttabbgcolor']};";
+                            if ($parentformatoptions['firsttabbgcolor'] !== '#f3f3f3') {
+                                $styles .= "padding-top: 8px;";
                             } else {
                                 $styles .= "border-top: 5px solid {$parentformatoptions['firsttabtopbordercolor']};";
                             }
 
-                            $tabs[$parentindex]->subtree[0]->text = '<div class="tab_content tab_initial" style="' .$styles. '">' .
-                                                                    $firsttabtext . "</div>";
-                            $tabs[$parentindex]->subtree[0]->level = 2;
-
                             if ($displaysection == $section - 1) {
+                                // Set the border bottom for the first tab.
+                                $styles .= "border-bottom: 8px solid {$parentformatoptions['firsttabbgcolor']};";
                                 $tabs[$parentindex]->subtree[0]->selected = true;
                             }
+
+                            $tabs[$parentindex]->subtree[0]->text = '<div class="tab_content tab_initial" style="' .$styles. '">' .
+                                $firsttabtext . "</div>";
+                            $tabs[$parentindex]->subtree[0]->level = 2;
                         }
                         $newtab->level = 2;
                         $tabs[$parentindex]->subtree[] = $newtab;
