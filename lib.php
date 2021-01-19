@@ -613,7 +613,7 @@ class format_onetopic extends format_base {
                     'element_type' => 'select',
                     'element_attributes' => array(
                         array(
-                            '#ffffff' => 'Default',
+                            '#ffffff' => get_string('default', 'form'),
                             '#ffdd00' => get_string('tabtype_ffdd00', 'format_onetopic'),
                             '#373a3c' => get_string('tabtype_373a3c', 'format_onetopic'),
                             '#f3f3f3' => get_string('tabtype_f3f3f3', 'format_onetopic'),
@@ -662,7 +662,7 @@ class format_onetopic extends format_base {
                     'element_type' => 'select',
                     'element_attributes' => array(
                         array(
-                            '#ffffff' => 'Default',
+                            '#ffffff' => get_string('default', 'form'),
                             '#ffdd00' => get_string('tabtype_ffdd00', 'format_onetopic'),
                             '#373a3c' => get_string('tabtype_373a3c', 'format_onetopic'),
                             '#f3f3f3' => get_string('tabtype_f3f3f3', 'format_onetopic'),
