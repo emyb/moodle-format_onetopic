@@ -288,10 +288,10 @@ class format_onetopic_renderer extends format_section_renderer_base {
                     }
 
                     // Add the border.
-                    if ($level === 0 || $level > 0 && $formatoptions['bgcolor'] !== '#f3f3f3') {
-                        $customstyles .= "padding-top: 8px;";
-                    } else {
+                    if ($formatoptions['bgcolor'] === '#f3f3f3' || $formatoptions['bgcolor'] === '#eeeeee') {
                         $customstyles .= "border-top: 5px solid {$formatoptions['topbordercolor']};";
+                    } else {
+                        $customstyles .= "padding-top: 8px;";
                     }
                     if ($tabisactive) {
                         $customstyles .= "border-bottom: 8px solid {$formatoptions['bgcolor']};";
@@ -371,18 +371,19 @@ class format_onetopic_renderer extends format_section_renderer_base {
                                 $styles .= 'background-color: ' . $parentformatoptions['firsttabbgcolor'] . ';';
                                 // Content style tab to be bolder.
                                 if ($parentformatoptions['firsttabbgcolor'] === '#f3f3f3' ||
-                                    $parentformatoptions['firsttabbgcolor'] === '#ffdd00'
-                                ) {
+                                        $parentformatoptions['firsttabbgcolor'] === '#ffdd00') {
                                     $styles .= 'font-weight: bolder;';
                                 }
 
                             }
 
                             // Add the border.
-                            if ($parentformatoptions['firsttabbgcolor'] !== '#f3f3f3') {
-                                $styles .= "padding-top: 8px;";
-                            } else {
+                            if ($parentformatoptions['firsttabbgcolor'] === '#f3f3f3' ||
+                                $parentformatoptions['firsttabbgcolor'] === '#eeeeee'
+                            ) {
                                 $styles .= "border-top: 5px solid {$parentformatoptions['firsttabtopbordercolor']};";
+                            } else {
+                                $styles .= "padding-top: 8px;";
                             }
 
                             if ($displaysection == $section - 1) {

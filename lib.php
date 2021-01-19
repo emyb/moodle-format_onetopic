@@ -465,8 +465,8 @@ class format_onetopic extends format_base {
         }
 
         // Set conditional top border color.
-        $mform->disabledIf('topbordercolor', 'bgcolor', 'neq', '#f3f3f3');
-        $mform->disabledIf('firsttabtopbordercolor', 'firsttabbgcolor', 'neq', '#f3f3f3');
+        $mform->disabledIf('topbordercolor', 'bgcolor', 'in', '#ffffff|#ffdd00|#373a3c|#00a1f1');
+        $mform->disabledIf('firsttabtopbordercolor', 'firsttabbgcolor', 'in', '#ffffff|#ffdd00|#373a3c|#00a1f1');
 
         return $elements;
     }
