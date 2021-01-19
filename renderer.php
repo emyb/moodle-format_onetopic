@@ -379,8 +379,7 @@ class format_onetopic_renderer extends format_section_renderer_base {
 
                             // Add the border.
                             if ($parentformatoptions['firsttabbgcolor'] === '#f3f3f3' ||
-                                $parentformatoptions['firsttabbgcolor'] === '#eeeeee'
-                            ) {
+                                    $parentformatoptions['firsttabbgcolor'] === '#eeeeee') {
                                 $styles .= "border-top: 5px solid {$parentformatoptions['firsttabtopbordercolor']};";
                             } else {
                                 $styles .= "padding-top: 8px;";
