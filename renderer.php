@@ -268,15 +268,19 @@ class format_onetopic_renderer extends format_section_renderer_base {
                 $level = 0;
                 if (is_array($formatoptions)) {
                     if (!empty($formatoptions['bgcolor'])) {
+                        // Content style tab to be bolder.
+                        if ($formatoptions['bgcolor'] === '#f3f3f3') {
+                            $customstyles .= 'font-weight: bolder;';
+                        }
+
+                        if ($formatoptions['bgcolor'] === '#eeeeee') {
+                            $formatoptions['bgcolor'] = '#f3f3f3';
+                        }
                         $customstyles .= "background-color: {$formatoptions['bgcolor']};";
 
                         // Font color based on background color.
                         if (!empty($formatoptions["fontcolor_{$formatoptions['bgcolor']}"])) {
                             $customstyles .= "color: {$formatoptions["fontcolor_{$formatoptions['bgcolor']}"]};";
-                        }
-                        // Content style tab to be bolder.
-                        if ($formatoptions['bgcolor'] === '#f3f3f3') {
-                            $customstyles .= 'font-weight: bolder;';
                         }
                         if ($tabisactive) {
                             $customstyles .= "border-bottom: 8px solid {$formatoptions['bgcolor']};";
@@ -368,18 +372,23 @@ class format_onetopic_renderer extends format_section_renderer_base {
                                 $styles .= "color: {$parentformatoptions["fontcolor_{$parentformatoptions['firsttabbgcolor']}"]};";
                             }
                             if (!empty($parentformatoptions['firsttabbgcolor'])) {
-                                $styles .= 'background-color: ' . $parentformatoptions['firsttabbgcolor'] . ';';
                                 // Content style tab to be bolder.
                                 if ($parentformatoptions['firsttabbgcolor'] === '#f3f3f3' ||
                                         $parentformatoptions['firsttabbgcolor'] === '#ffdd00') {
                                     $styles .= 'font-weight: bolder;';
                                 }
 
+                                if ($parentformatoptions['firsttabbgcolor'] === '#eeeeee') {
+                                    $parentformatoptions['firsttabbgcolor'] = '#f3f3f3';
+                                }
+                                $styles .= 'background-color: ' . $parentformatoptions['firsttabbgcolor'] . ';';
+
                             }
 
                             // Add the border.
                             if ($parentformatoptions['firsttabbgcolor'] === '#f3f3f3' ||
                                     $parentformatoptions['firsttabbgcolor'] === '#eeeeee') {
+                                $parentformatoptions['firsttabtopbordercolor'] = '#f3f3f3';
                                 $styles .= "border-top: 5px solid {$parentformatoptions['firsttabtopbordercolor']};";
                             } else {
                                 $styles .= "padding-top: 8px;";

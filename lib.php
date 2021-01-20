@@ -554,7 +554,7 @@ class format_onetopic extends format_base {
                     'type' => PARAM_RAW
                 ),
                 'firsttabtopbordercolor' => array(
-                    'default' => '#eeeeee',
+                    'default' => '#f3f3f3',
                     'type' => PARAM_RAW
                 ),
                 'bgcolor' => array(
@@ -582,7 +582,7 @@ class format_onetopic extends format_base {
                     'type' => PARAM_RAW
                 ),
                 'topbordercolor' => array(
-                    'default' => '#eeeeee',
+                    'default' => '#f3f3f3',
                     'type' => PARAM_RAW
                 )
             );
@@ -623,7 +623,7 @@ class format_onetopic extends format_base {
                     )
                 ),
                 'topbordercolor' => array(
-                    'default' => '#eeeeee',
+                    'default' => '#f3f3f3',
                     'type' => PARAM_RAW,
                     'label' => get_string('topbordercolor', 'format_onetopic'),
                     'help' => 'topbordercolor',
@@ -631,7 +631,7 @@ class format_onetopic extends format_base {
                     'element_type' => 'select',
                     'element_attributes' => array(
                         array(
-                            '#eeeeee' => get_string('topbordercolor_eeeeee', 'format_onetopic'),
+                            '#f3f3f3' => get_string('topbordercolor_eeeeee', 'format_onetopic'),
                             '#ffdd00' => get_string('topbordercolor_ffdd00', 'format_onetopic'),
                             '#373a3c' => get_string('topbordercolor_373a3c', 'format_onetopic'),
                             '#00a1f1' => get_string('topbordercolor_00a1f1', 'format_onetopic')
@@ -672,7 +672,7 @@ class format_onetopic extends format_base {
                     )
                 ),
                 'firsttabtopbordercolor' => array(
-                    'default' => '#eeeeee',
+                    'default' => '#f3f3f3',
                     'type' => PARAM_RAW,
                     'label' => get_string('firsttabtopbordercolor', 'format_onetopic'),
                     'help' => 'topbordercolor',
@@ -680,7 +680,7 @@ class format_onetopic extends format_base {
                     'element_type' => 'select',
                     'element_attributes' => array(
                         array(
-                            '#eeeeee' => get_string('topbordercolor_eeeeee', 'format_onetopic'),
+                            '#f3f3f3' => get_string('topbordercolor_eeeeee', 'format_onetopic'),
                             '#ffdd00' => get_string('topbordercolor_ffdd00', 'format_onetopic'),
                             '#373a3c' => get_string('topbordercolor_373a3c', 'format_onetopic'),
                             '#00a1f1' => get_string('topbordercolor_00a1f1', 'format_onetopic')
