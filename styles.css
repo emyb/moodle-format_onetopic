@@ -35,7 +35,6 @@
 }
 
 .format-onetopic ul.nav-tabs li a .tab_content.dimmed .sectionname {
-    color: #999;
     opacity: 0.5;
 }
 
@@ -59,7 +58,6 @@
 
 .format-onetopic .onetopic .nav-tabs > li > a {
     padding: 0;
-    margin-right: .5rem;
 }
 
 .format-onetopic .onetopic .tab_content {
