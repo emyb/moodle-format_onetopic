@@ -365,9 +365,7 @@ class format_onetopic_renderer extends format_section_renderer_base {
                             }
                             // Get custom styles for the first tab.
                             $styles = '';
-                            if (!empty($parentformatoptions['firsttabfontcolor'])) {
-                                $styles .= 'color: ' . $parentformatoptions['firsttabfontcolor'] . ';';
-                            } else if (!empty($parentformatoptions["fontcolor_{$parentformatoptions['firsttabbgcolor']}"])) {
+                            if (!empty($parentformatoptions["fontcolor_{$parentformatoptions['firsttabbgcolor']}"])) {
                                 // Font color based on background color.
                                 $styles .= "color: {$parentformatoptions["fontcolor_{$parentformatoptions['firsttabbgcolor']}"]};";
                             }
@@ -388,7 +386,6 @@ class format_onetopic_renderer extends format_section_renderer_base {
                             // Add the border.
                             if ($parentformatoptions['firsttabbgcolor'] === '#f3f3f3' ||
                                     $parentformatoptions['firsttabbgcolor'] === '#eeeeee') {
-                                $parentformatoptions['firsttabtopbordercolor'] = '#f3f3f3';
                                 $styles .= "border-top: 5px solid {$parentformatoptions['firsttabtopbordercolor']};";
                             } else {
                                 $styles .= "padding-top: 8px;";
